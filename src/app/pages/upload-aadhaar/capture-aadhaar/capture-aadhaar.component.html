@@ -1,0 +1,129 @@
+<div *ngIf="isLoading">
+  <div class="loading">Loading&#8230;</div>
+</div>
+
+<i class="fa fa-arrow-left fa-2x" aria-hidden="true" (click)="gobacktoPreviousPage()"></i>
+<br>
+<br>
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+    <div class="card" style="background-color: #cdfffe">
+      <div class="card-header">
+        <h5 class="card-title" style="text-align: center; font-size: 18px;"><b> Please show your Aadhaar Card to your
+            camera.!</b></h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-sm-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+    <div class="card">
+      <h5 class="card-title" style="text-align: center">
+        Captured Image will be shown here.
+      </h5>
+      <div class="card-body">
+        <div class="snapshot" style="text-align: center" *ngIf="webcamImage">
+          <img [height]="375" [width]="500" [src]="webcamImage.imageAsDataUrl" />
+        </div>
+        <div style="text-align: center" *ngIf="webcamImage">
+          <button type="button" class="btn btn-outline-primary snapshot" (click)="gotoUploadPANPage()">
+            Submit
+          </button>
+        </div>
+        <h4 *ngIf="errors.length > 0">Messages:</h4>
+        <ul *ngFor="let error of errors">
+          <li>{{ error | json }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title" style="text-align: center">Image Capture</h5>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-2 col-sm-2 col-md-2 col-sm-2 col-lg-2 col-xl-2"></div>
+          <div class="col-8 col-sm-8 col-md-8 col-sm-8 col-lg-8 col-xl-8">
+            <div style="text-align: center">
+              <div>
+                <webcam [height]="500" [width]="500" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
+                  *ngIf="showWebcam" [allowCameraSwitch]="allowCameraSwitch" [switchCamera]="nextWebcamObservable"
+                  [videoOptions]="videoOptions" [imageQuality]="1" (cameraSwitched)="cameraWasSwitched($event)"
+                  (initError)="handleInitError($event)"></webcam>
+                <br />
+                <button class="btn btn-outline-primary snaphot" (click)="triggerSnapshot()">
+                  Capture
+                </button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-outline-primary snaphot" (click)="toggleWebcam()">
+                  Switch Camera
+                </button>
+                <br />
+                <!-- <button
+					class="actionBtn"
+					(click)="showNextWebcam(true)"
+					[disabled]="!multipleWebcamsAvailable"
+				  >
+					Next Webcam
+				  </button>
+				  <input
+					id="cameraSwitchCheckbox"
+					type="checkbox"
+					[(ngModel)]="allowCameraSwitch"
+				  />
+					  <label for="cameraSwitchCheckbox">Allow Camera Switch</label>
+				  <br />
+				  DeviceId:
+				  <input
+					id="deviceId"
+					type="text"
+					[(ngModel)]="deviceId"
+					style="width: 500px"
+				  />
+				  <button (click)="showNextWebcam(deviceId)">Activate</button>
+				  <br />
+				  Preferred facing mode:
+				  <input
+					type="radio"
+					value="user"
+					name="facingMode"
+					[(ngModel)]="facingMode"
+				  />
+				  User
+				  <input
+					type="radio"
+					value="environment"
+					name="facingMode"
+					[(ngModel)]="facingMode"
+				  />
+				  Environment
+				  <input
+					type="radio"
+					value=""
+					name="facingMode"
+					[(ngModel)]="facingMode"
+				  />
+				  No preference -->
+              </div>
+            </div>
+          </div>
+          <div class="col-2 col-sm-2 col-md-2 col-sm-2 col-lg-2 col-xl-2"></div>
+          <!-- <div class="col-4 col-sm-4 col-md-4 col-sm-4 col-lg-4 col-xl-4"></div> -->
+          <!-- <div
+			  class="col-4 col-sm-4 col-md-4 col-sm-4 col-lg-4 col-xl-4"
+			  *ngIf="webcamImage"
+			>
+			  <img [src]="webcamImage.imageAsDataUrl" />
+			  <button type="button" class="btn btn-outline-primary">
+				CAPTURE
+			  </button>
+			  <button type="button" class="btn btn-outline-primary">
+				CHECK MY LIVELINESS AND LIGHTNING
+			  </button>
+			</div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

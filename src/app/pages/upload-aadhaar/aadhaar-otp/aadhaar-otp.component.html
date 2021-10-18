@@ -1,0 +1,48 @@
+<i class="fa fa-arrow-left fa-2x" aria-hidden="true" (click)="gobacktoPreviousPage()"></i>
+<br>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title" style="text-align: center">Aadhaar OTP</h3>
+        <p class="card-category" style="text-align: center">
+          Please enter the 6-digit OTP received on your registered mobile
+          number.
+        </p>
+      </div>
+      <div class="card-body">
+        <form class="col-md-12">
+          <div class="mb-3">
+            <label for="aadhaarNumber" class="form-label">Aadhaar Number</label>
+            <input
+              type="aadhaarNumber"
+              class="form-control"
+              id="aadhaarNumber"
+              [(ngModel)] = "aadhaarNumber"
+              [ngModelOptions]="{standalone: true}"
+              aria-describedby="aadhaarNumberHelp"
+            />
+          </div>
+
+          <div class="mb-3">
+            <div class="align-text">
+              <button type="button" class="btn btn-link" style="float: right" (click)= getOTP()>Get OTP</button>
+            </div>
+            <input
+              type="password"
+              class="form-control"
+              id="inputOTP"
+              [(ngModel)] = "inputOTP"
+              [ngModelOptions]="{standalone: true}"
+              placeholder="Please Enter OTP here"
+            />
+          </div>
+          <div class="mb-3">
+            <button type="button" class="btn btn-primary" (click)="gotoUploadPANPage()">Submit OTP</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

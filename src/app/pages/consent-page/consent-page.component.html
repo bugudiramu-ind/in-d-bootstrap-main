@@ -1,0 +1,41 @@
+<style>
+  .btn-success {
+    width: 40vh;
+    height: 5vh;
+    padding: 5px;
+  }
+</style>
+
+<div class="row">
+  <div class="col-md-12">
+    
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title" style="text-align: center">Consent for KYC</h3>
+
+        <p class="card-text">
+          Please give your consent for using your camera, microphone and screen
+          capture by clicking '<b>Allow</b>' on all the pop-ups that appear.
+        </p>
+        <ul>
+          <li>I am physically present in India.</li>
+          <li>I am a resident of India and I am an Indian National.</li>
+          <li>I am not a politically exposed person.</li>
+          <li>
+            I am above 18 years of age, capable of self-operation of accounts,
+            and not reportable under FATCA and CRS.
+          </li>
+        </ul>
+
+        <section class="example-section">
+          <mat-checkbox #confirmed class="example-margin">I hereby accept the above and consent to KYC.</mat-checkbox>
+        </section>
+        <div class="d-flex justify-content-center align-items-center">
+          <button type="button" class="btn btn-success" [disabled]="!confirmed.checked" (click)="gotoImageCaptureComponent()">
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<i class="fa fa-arrow-left fa-2x" aria-hidden="true" (click)="gobacktoPreviousPage()"></i>
+<br>
+<br>
+
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+    <div class="card">
+      <div class="row">
+        <div class="col-4 col-sm-4 col-md-4 col-sm-4 col-lg-4 col-xl-4"></div>
+        <div class="col-4 col-sm-4 col-md-4 col-sm-4 col-lg-4 col-xl-4">
+          <!-- <label>
+            <input type="file" id="file" (change)="handleFileInput($event.target.files)" />
+            <img src="../../../../assets/img/UploadXMLIcon.svg" height="250px" width="20px" alt="Card image cap"
+              class="form-control-file" id="exampleFormControlFile1" />
+          </label> -->
+          <input type="file" class="file-input" requiredFileType="image/png" (change)="onFileSelected($event)"
+            #fileUpload>
+
+          <div class="file-upload">
+
+            {{fileName || "No file uploaded yet."}}
+
+            <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+              <mat-icon>attach_file</mat-icon>
+            </button>
+          </div>
+        </div>
+        <div class="col-4 col-sm-4 col-md-4 col-sm-4 col-lg-4 col-xl-4"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+    <div class="card">
+      <div class="card-body" style="text-align: center">
+        You can always download your Aadhaar XML from
+        <a href="https://resident.uidai.gov.in/offline-kyc">here</a>.
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Enter your Aadhaar XML Credentials.</h5>
+        <div class="form-group">
+          <label for="phoneNumberInput">Mobile Number</label>
+          <input type="text" class="form-control" id="phoneNumberInput" aria-describedby="phoneNumber"
+            placeholder="Enter your Mobile Number" />
+        </div>
+        <div class="form-group">
+          <label for="XMLShareCode">Password</label>
+          <input type="password" class="form-control" id="XMLShareCode" placeholder="Share Code" />
+        </div>
+        <div style="align-items: center">
+          <button type="button" class="btn btn-primary" (click)="gotoUploadPANPage()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.image img {
+  border-radius: 0%;
+}
+
+.alignleft {
+  float: left;
+  /* margin-left: 5%; */
+}
+.alignright {
+  float: right;
+  /* margin-right: 5%; */
+}

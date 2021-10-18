@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43.326" height="55.563" viewBox="0 0 43.326 55.563">
+  <g id="Group_462" data-name="Group 462" transform="translate(-33 -418.437)">
+    <g id="chat" transform="translate(16.131 418.437)">
+      <g id="Group_456" data-name="Group 456" transform="translate(28.16 0)">
+        <path id="Path_391" data-name="Path 391" d="M118.014,0h21.4a5.334,5.334,0,0,1,5.316,5.319V50.247a5.333,5.333,0,0,1-5.316,5.316h-21.4a5.334,5.334,0,0,1-5.319-5.316V5.319A5.334,5.334,0,0,1,118.014,0Z" transform="translate(-112.695 0)" fill="#a1eeeb" fill-rule="evenodd"/>
+        <path id="Path_392" data-name="Path 392" d="M333.91,0h2.713a5.334,5.334,0,0,1,5.316,5.319V50.247a5.333,5.333,0,0,1-5.316,5.316H333.91a5.331,5.331,0,0,0,5.316-5.316V5.319A5.332,5.332,0,0,0,333.91,0Z" transform="translate(-309.903 0)" fill="#a1eeeb" fill-rule="evenodd"/>
+        <path id="Path_393" data-name="Path 393" d="M144.731,431.523v3.418a5.333,5.333,0,0,1-5.316,5.316h-21.4a5.334,5.334,0,0,1-5.319-5.316v-3.418Z" transform="translate(-112.695 -384.693)" fill="#048c88" fill-rule="evenodd"/>
+        <path id="Path_394" data-name="Path 394" d="M192.182,0V3.258a2.013,2.013,0,0,1-2.006,2.009H175.309A2.015,2.015,0,0,1,173.3,3.258V0Z" transform="translate(-166.723 0)" fill="#048c88" fill-rule="evenodd"/>
+      </g>
+      <path id="Path_395" data-name="Path 395" d="M219.412,465.891a.814.814,0,1,1,0-1.627h7.423a.814.814,0,0,1,0,1.627Z" transform="translate(-178.945 -413.881)" fill="#a1eeeb"/>
+      <path id="Path_400" data-name="Path 400" d="M339.226,431.523v3.418a5.331,5.331,0,0,1-5.316,5.316h2.713a5.333,5.333,0,0,0,5.316-5.316v-3.418Z" transform="translate(-281.744 -384.693)" fill="#048c88" fill-rule="evenodd"/>
+      <path id="Path_401" data-name="Path 401" d="M305.815,0V3.258a2.015,2.015,0,0,1-2.009,2.009h2.713a2.013,2.013,0,0,0,2.006-2.009V0Z" transform="translate(-254.906 0)" fill="#048c88" fill-rule="evenodd"/>
+      <path id="Path_402" data-name="Path 402" d="M7,0H27a8.055,8.055,0,0,1,8,8.109,8.055,8.055,0,0,1-8,8.109H7A8.055,8.055,0,0,1-1,8.109,8.055,8.055,0,0,1,7,0Z" transform="translate(17.869 11.563)" fill="#048c88"/>
+    </g>
+    <circle id="Ellipse_41" data-name="Ellipse 41" cx="2.5" cy="2.5" r="2.5" transform="translate(38 436)" fill="#a1eeeb"/>
+    <circle id="Ellipse_42" data-name="Ellipse 42" cx="2.5" cy="2.5" r="2.5" transform="translate(45 436)" fill="#a1eeeb"/>
+    <circle id="Ellipse_43" data-name="Ellipse 43" cx="2.5" cy="2.5" r="2.5" transform="translate(52 436)" fill="#a1eeeb"/>
+    <circle id="Ellipse_44" data-name="Ellipse 44" cx="2.5" cy="2.5" r="2.5" transform="translate(59 436)" fill="#a1eeeb"/>
+  </g>
+</svg>
